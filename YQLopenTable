@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+<meta>
+<author></author>
+<description></description>
+<sampleQuery>
+<![CDATA[
+select * from {table} where url='http://prelive.viatorapi.viator.com/service/search/products?apiKey=94364878010801' and postdata="%7B%22startDate%22%3A%222013-12-25%22%2C%22endDate%22%3A%222013-12-25%22%2C%20%22topX%22%3A%221-15%22%2C%22destId%22%3A22%2C%20%22currencyCode%22%3A%22EUR%22%2C%20%22catId%22%3A3%2C%20%22subCatId%22%3A7%2C%20%22dealsOnly%22%3Afalse%7D"
+]]>
+</sampleQuery>
+<documentationURL/>
+</meta>
+<bindings>
+<select itemPath="" produces="JSON">
+<urls>
+<url>{url}</url>
+</urls>
+<inputs>
+<key id="url" type="xs:string" required="true" paramType="variable"/>
+<key id="postdata" type="xs:string" required="true" paramType="variable"/>
+
+</inputs>
+<execute>
+<![CDATA[
+var myRequest = y.rest(url); var data = myRequest.accept('application/javascript'). contentType("application/x-www-form-urlencoded"). post(postdata).response;
+]]>
+</execute>
+</select>
+</bindings>
+</table>
