@@ -18,7 +18,7 @@ postdata="%7B%22startDate%22%3A%222013-12-25%22%2C%22endDate%22%3A%222013-12-25%
 </urls>
 <inputs>
 <key id="url" type="xs:string" required="true" paramType="variable"/>
-<key id="postdata" type="application/json" encoding="gzip" required="true" paramType="variable"/>
+<key id="postdata" type="application/json" required="true" paramType="variable"/>
 
 </inputs>
 <execute>
