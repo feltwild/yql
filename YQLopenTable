@@ -17,7 +17,7 @@ select * from {table} where url='http://prelive.viatorapi.viator.com/service/sea
 </urls>
 <inputs>
 <key id="url" type="xs:string" required="true" paramType="variable"/>
-<key id="postdata" type="xs:string" required="true" paramType="variable"/>
+<key id="postdata" type="application/javascript" required="true" paramType="variable"/>
 
 </inputs>
 <execute>
